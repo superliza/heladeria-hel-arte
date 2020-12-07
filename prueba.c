@@ -4,14 +4,14 @@
 
 int main () {
 	
-	setlocale (LC_ALL, "spanish");
+	setlocale (LC_ALL, " ");
 	
 	int entero;
 	
-	for (entero = 0; entero <= 500; entero ++) {
+	for (entero = 0; entero <= 256; entero ++) {
 		
-		printf (" %d %c\n", entero, entero);
-//		printf ("%c", 153);
+//		printf (" %d %c\n", entero, entero);
+		printf ("ú");
 	}
     
 }

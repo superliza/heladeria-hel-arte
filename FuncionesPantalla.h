@@ -19,7 +19,7 @@ void MargenConDosCuadros ();
 void MitadDeLineaHorizontalDerecha ();
 void MitadDeLineaVertical ();
 void LineaHorizontal (int);
-void LineaVertical (int);
+void LineaVertical (int, int);
 void CentrarTexto (char *, int);
 void CentrarTextoEnCuadroChicoIzquierdo (char *, int);
 void CentrarTextoEnCuadroChicoDerecho (char *, int);
@@ -124,22 +124,63 @@ void LineaHorizontal (int y) {
 	
 }
 
-void LineaVertical (int x) {
+void LineaVertical (int x, int eOpcion) {
 	
 	int eColumnas;
 	
-	for (eColumnas = 6; eColumnas <= 22; eColumnas ++) {
+	switch (eOpcion){
+	
+		case 1: 
 		
-		gotoxy (x, eColumnas);
-		printf ("%c", 179);
+			for (eColumnas = 6; eColumnas <= 22; eColumnas ++) {
+			
+				gotoxy (x, eColumnas);
+				printf ("%c", 179);
+			}
+			
+			gotoxy (x, 6);
+			printf ("%c", 194);
+			gotoxy (x, 8);
+			printf ("%c", 197);
+			gotoxy (x, 22);
+			printf ("%c", 193);
+		
+		break;
+		
+		case 2: 
+		
+			for (eColumnas = 4; eColumnas <= 22; eColumnas ++) {
+			
+				gotoxy (x, eColumnas);
+				printf ("%c", 179);
+			}
+			
+			gotoxy (x, 4);
+			printf ("%c", 194);
+			gotoxy (x, 6);
+			printf ("%c", 197);
+			gotoxy (x, 22);
+			printf ("%c", 193);
+	
+		break;
+	
+	case 3: 
+	
+		for (eColumnas = 4; eColumnas <= 22; eColumnas ++) {
+			
+				gotoxy (x, eColumnas);
+				printf ("%c", 179);
+			}
+		
+		gotoxy (x, 4);
+		printf ("%c", 194);
+		gotoxy (x, 22);
+		printf ("%c", 193);
+		
+	break;
+	
 	}
 	
-	gotoxy (x, 6);
-	printf ("%c", 194);
-	gotoxy (x, 8);
-	printf ("%c", 197);
-	gotoxy (x, 22);
-	printf ("%c", 193);
 	
 }
 
@@ -154,10 +195,10 @@ void MargenConDosCuadros () {
 		gotoxy (eRenglones, 4);
 		printf ("%c", 196);
 		
-		gotoxy (eRenglones, 8);
+		gotoxy (eRenglones, 6);
 		printf ("%c", 196);
 		
-		gotoxy (eRenglones, 21);
+		gotoxy (eRenglones, 22);
 		printf ("%c", 196);
 	
 	}
@@ -166,16 +207,16 @@ void MargenConDosCuadros () {
 	printf ("%c", 195);
 	gotoxy (86, 4);
 	printf ("%c", 180);
-	gotoxy (0, 8);
+	gotoxy (0, 6);
 	printf ("%c", 195);
-	gotoxy (86, 8);
+	gotoxy (86, 6);
 	printf ("%c", 180);
-	gotoxy (0, 21);
+	gotoxy (0, 22);
 	printf ("%c", 195);
-	gotoxy (86, 21);
+	gotoxy (86, 22);
 	printf ("%c", 180);
 	
-	for (eColumnas = 9; eColumnas < 21; eColumnas ++) {
+	for (eColumnas = 7; eColumnas < 22; eColumnas ++) {
 		
 		gotoxy (43, eColumnas);
 		printf ("%c", 179);
@@ -184,9 +225,9 @@ void MargenConDosCuadros () {
 //		printf ("%c", 179);
 	}
 	
-	gotoxy (43, 8);
+	gotoxy (43, 6);
 	printf ("%c", 194);
-	gotoxy (43, 21);
+	gotoxy (43, 22);
 	printf ("%c", 193);
 }
 
@@ -224,7 +265,7 @@ void MitadDeLineaVertical () {
 	
 	gotoxy (43, 4);
 	printf ("%c", 194);
-	gotoxy (43, 8);
+	gotoxy (43, 6);
 	printf ("%c", 197);
 	
 }

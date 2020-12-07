@@ -1,9 +1,9 @@
 /*
 	Programa: heladeriaHelArte.c
 	Autores:
-		1.
-		2.
-		3.
+		1. Guerrero Torres Elizabeth
+		2. López Monares Gail Keegan
+		3. Rivera Alvarez Jonathan Charly
 	Fecha: 17/11/2020
 	Objetivo: Mostrar el menú principal de la heladería HEL-ARTE.
 */
@@ -19,6 +19,7 @@
 #include "MenuVentas.c"
 #include "MenuCompras.c"
 #include "MenuAlmacen.c"
+#include "MenuCategorias.c"
 
 #include "logo.c"
 
@@ -43,18 +44,20 @@ int main (void) {
 		printf("Mensajes del sistema: ");
 		
 //		gotoxy ();
-//		printf("%c", )
+//		printf("%c", );
 		CentrarTexto("HELADERÍA HEL-ARTE", 2);
-		gotoxy(2, 8);
+		gotoxy(2, 6);
 		printf("1. Menú de productos");
-		gotoxy(2, 10);
+		gotoxy(2, 8);
 		printf("2. Menú de ventas");
-		gotoxy(2, 12);
+		gotoxy(2, 10);
 		printf("3. Menú de compras");
-		gotoxy(2, 14);
+		gotoxy(2, 12);
 		printf("4. Menú de almacén");
+		gotoxy(2, 14);
+		printf("5. Menu de categorias");
 		gotoxy(2, 16);
-		printf("5. Salir");
+		printf("6. Salir");
 			
 		gotoxy(2, 20);
 		printf("Ingrese una opción: ");	
@@ -70,8 +73,10 @@ int main (void) {
 			case 3: MenuCompras();
 				break;
 			case 4: MenuAlmacen();
-				break;
-			case 5: CentrarTexto("Adiós.", 23);
+				break;			
+			case 5: MenuCategorias();
+				break;		
+			case 6: CentrarTexto("Adiós.", 23);
 				break;
 			default: CentrarTexto("Error, escoja una opción válida.", 23);
 				break;
@@ -79,6 +84,6 @@ int main (void) {
 
 		getchar();
 		
-	} while (eOpcion != 5);
+	} while (eOpcion != 6);
 	
 }

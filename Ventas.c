@@ -1,9 +1,9 @@
 /*
 	Programa: Ventas.c
 	Autores:
-		1.
-		2.
-		3.
+		1. Guerrero Torres Elizabeth
+		2. López Monares Gail Keegan
+		3. Rivera Alvarez Jonathan Charly
 	Fecha: 17/11/2020
 	Objetivo: Realizar todas las operaciones correspondientes de la heladería HEL-ARTE.
 */
@@ -27,12 +27,12 @@ void RegistrarVenta () {
 	printf("Mensajes del sistema: ");
 	
 	CentrarTexto("REGISTRO DE VENTA", 2);
-	CentrarTexto("Nombre del producto: ", 6);
+	CentrarTexto("Nombre del producto: ", 5);
 	
 	CentrarTextoEnCuadroChicoIzquierdo ("Cantidad vendida: ", 12);
 	CentrarTextoEnCuadroChicoIzquierdo ("Fecha (dd/mm/aaaa):   /  /    ", 14);
-	CentrarTextoEnCuadroChicoDerecho ("ID de la venta: ", 11);
-	CentrarTextoEnCuadroChicoDerecho ("Total de venta: ", 17);
+	CentrarTextoEnCuadroChicoDerecho ("ID de la venta: ", 10);
+	CentrarTextoEnCuadroChicoDerecho ("Total de venta: ", 18);
 	
 	getchar();
 }
@@ -48,7 +48,7 @@ void CancelarVenta () {
 	printf("Mensajes del sistema: ");
 	
 	CentrarTexto("CANCELAR VENTA", 2);
-	CentrarTexto("ID de la venta: ", 6);
+	CentrarTexto("ID de la venta: ", 5);
 	
 	CentrarTextoEnCuadroChicoIzquierdo ("-Datos de la venta-: ", 9);
 	CentrarTextoEnCuadroChicoIzquierdo ("Producto vendido: ", 11);
@@ -56,9 +56,8 @@ void CancelarVenta () {
 	CentrarTextoEnCuadroChicoIzquierdo ("Cantidad vendida: ", 15);
 	CentrarTextoEnCuadroChicoIzquierdo ("Fecha (dd/mm/aaaa):   /  /    ", 17);
 	
-	CentrarTextoEnCuadroChicoDerecho ("¿Desea cancelar este producto? [S/N]", 11);
-	CentrarTextoEnCuadroChicoDerecho ("Motivo de cancelacion: ", 17);
-
+	CentrarTextoEnCuadroChicoDerecho ("¿Desea cancelar este producto? [S/N]: ", 10);
+	CentrarTextoEnCuadroChicoDerecho ("Motivo de cancelacion: ", 18);
 	
 	getchar();
 	
@@ -99,18 +98,90 @@ void ConsultarVenta () {
 
 void ListarVentasDeUnProducto () {
 	
-	printf ("Listar venta producto");
+	system("cls");
+	MargenPantalla ();
+	
+	CentrarTexto("LISTADO DE TODAS LAS VENTAS DE UN PRODUCTO", 2);
+	LineaHorizontal (4);
+	CentrarTexto("ID del producto: ", 5);
+	LineaHorizontal (6);
+	
+	LineaHorizontal (8);
+	
+	gotoxy (1,7);
+	printf (" ID !      Producto      ! Precio !     Costo      !Cantidad vendida!     Fecha");
+	
+	LineaHorizontal (22);
+	gotoxy(2, 23);
+	printf("Mensajes del sistema: ");
+	
+	LineaVertical (5,1);
+	LineaVertical (26,1);
+	LineaVertical (35,1);
+	LineaVertical (52,1);
+	LineaVertical (69,1);
+	
+	
 	getchar();
 }
 
 void ListarVentasEnUnPeriodo () {
 	
-	printf ("Listar ventas periodo");
+	system("cls");
+	MargenPantalla ();
+	
+	CentrarTexto("LISTADO DE TODAS LAS VENTAS EN UN PERIODO DE TIEMPO", 2);
+	LineaHorizontal (4);
+	CentrarTextoEnCuadroChicoIzquierdo ("Fecha inicial (dd/mm/aaaa): ",5);
+	CentrarTextoEnCuadroChicoDerecho ("Fecha inicial (dd/mm/aaaa): ",5);
+	
+	LineaHorizontal (6);
+	
+	gotoxy(43, 4);
+	printf("%c", 194);
+	gotoxy(43, 5);
+	printf("%c", 179);
+	gotoxy(43, 6);
+	printf("%c", 193);
+	
+	LineaHorizontal (8);
+	
+	gotoxy (1,7);
+	printf (" ID !      Producto      ! Precio !     Costo      !Cantidad vendida!     Fecha");	
+
+	LineaHorizontal (22);
+	gotoxy(2, 23);
+	printf("Mensajes del sistema: ");
+	
+	LineaVertical (5,1);
+	LineaVertical (26,1);
+	LineaVertical (35,1);
+	LineaVertical (52,1);
+	LineaVertical (69,1);
+	
 	getchar();
 }
 
 void ListarVentas () {
 	
-	printf ("Listar todas las ventas");
+	system("cls");
+	MargenPantalla ();
+	
+	CentrarTexto("LISTADO DE TODAS LAS VENTAS", 2);
+	LineaHorizontal (4);
+	gotoxy (1,5);
+	printf (" ID !      Producto      ! Precio !     Costo      !Cantidad vendida!     Fecha");
+	LineaHorizontal (6);
+
+	LineaHorizontal (22);
+	gotoxy(2, 23);
+	printf("Mensajes del sistema: ");
+	
+	LineaVertical (5,2);
+	LineaVertical (26,2);
+	LineaVertical (35,2);
+	LineaVertical (52,2);
+	LineaVertical (69,2);
+	
 	getchar();
 }

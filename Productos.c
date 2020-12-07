@@ -1,9 +1,9 @@
 /*
 	Programa: Productos.c
 	Autores:
-		1.
-		2.
-		3.
+		1. Guerrero Torres Elizabeth
+		2. López Monares Gail Keegan
+		3. Rivera Alvarez Jonathan Charly
 	Fecha: 17/11/2020
 	Objetivo: Realizar todas las operaciones correspondientes de la heladería HEL-ARTE.
 */
@@ -26,7 +26,7 @@ void RegistrarProducto () {
 	printf("Mensajes del sistema: ");
 	
 	CentrarTexto("REGISTRO DE PRODUCTO", 2);
-	CentrarTexto("Nombre del producto: ", 6);
+	CentrarTexto("Nombre del producto: ", 5);
 	
 //	gotoxy (22, 10);
 	CentrarTextoEnCuadroChicoIzquierdo ("ID de la categoría: ", 10);
